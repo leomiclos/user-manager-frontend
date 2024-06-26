@@ -46,7 +46,7 @@ export class UserComponent {
     this.getUser()
   }
 
-  alter(user: any) {
+  alter(user: User) {
     this.selectedUser = user
     const initialState = {
       user: this.selectedUser
@@ -85,7 +85,7 @@ export class UserComponent {
 
   getDepartmentsById(id: number) {
     this.departmentService.getDepartmentsById(id).pipe(
-      map((res: any) => res.departamento) // Adjust this to match the actual response structure
+      map((res: any) => res.departamento)
     ).subscribe(departmentName => {
       this.departments.set(id, departmentName);
     });

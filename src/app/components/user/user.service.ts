@@ -26,8 +26,7 @@ export class UserService{
     return this.http.delete(`${this.api}/usuarios/${id}`)
   }
 
-  alterUser(body: any){
-    const id = body.id
+  editUser(body: any, id: number){
     return this.http.put(`${this.api}/usuarios/${id}`, body)
   }
 
