@@ -21,4 +21,8 @@ export class HomeComponent {
   user(){
     this.router.navigate(['/home/user-list'])
   }
+
+  department(){
+    this.router.navigate(['/home/department-list'])
+  }
 }

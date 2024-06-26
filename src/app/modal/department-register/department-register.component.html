@@ -1,0 +1,15 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="container mt-5">
+  <div class="mb-3">
+    <h3>Cadastro de departamento</h3>
+  </div>
+  <div class="mb-3">
+    <label for="departamento" class="form-label">Departamento</label>
+    <input id="departamento" formControlName="departamento" class="form-control" />
+    <div *ngIf="registerForm.get('departamento')?.invalid && registerForm.get('departamento')?.touched" class="text-danger">
+      Departamento é obrigatório
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary mb-3" [disabled]="registerForm.invalid">Register</button>
+
+</form>

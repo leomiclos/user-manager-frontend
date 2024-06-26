@@ -7,23 +7,30 @@
     <thead>
       <tr>
         <th>Nome</th>
-        <th>Data de Nascimento</th>
+        <th>Email</th>
         <th>Departamento</th>
+        <th>Data de Nascimento</th>
         <th>Ações</th>
+
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let user of users">
-        <td>{{ user.name }}</td>
-        <td>{{ user.dateOfBirth }}</td>
-        <td>{{ user.department }}</td>
+        <td>{{ user.nome }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ getDepartmentName(user.departamento) }}</td>
+        <td>{{ formatarData(user.dataNascimento) }}</td>
+
         <td>
-          <button class="btn btn-info btn-sm mr-2" (click)="alter()">Editar</button>
-          <button class="btn btn-danger btn-sm ml-2" (click)="exclude()">Excluir</button>
+          <button class="btn btn-info btn-sm mr-2" (click)="alter(user)">Editar</button>
+          <button class="btn btn-danger btn-sm ml-2" (click)="exclude(user)">Excluir</button>
         </td>
+
       </tr>
+
     </tbody>
+    <button class="btn btn-primary mb-3 mt-3" (click)="newUser()">Cadastrar Novo Usuário</button>
+
   </table>
-  <button class="btn btn-primary mb-3" (click)="newUser()">Cadastrar Novo Usuário</button>
 
 </div>

@@ -18,6 +18,19 @@ export class UserService{
     return this.http.get(`${this.api}/usuarios`)
   }
 
+  newUser(body: any){
+    return this.http.post(`${this.api}/usuarios`, body)
+  }
+
+  deleteUser(id: number){
+    return this.http.delete(`${this.api}/usuarios/${id}`)
+  }
+
+  alterUser(body: any){
+    const id = body.id
+    return this.http.put(`${this.api}/usuarios/${id}`, body)
+  }
+
 
 
 

@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './components/home/home.component';
-import { UserRegisterComponent } from './components/user-register/user-register.component';
 import { UserComponent } from './components/user/user.component';
-import { DepartmentRegisterComponent } from './components/department-register/department-register.component';
+import { DepartmentRegisterComponent } from './modal/department-register/department-register.component';
 import { DepartmentListComponent } from './components/department-list/department-list.component';
+import { UserRegisterComponent } from './modal/user-register/user-register.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },

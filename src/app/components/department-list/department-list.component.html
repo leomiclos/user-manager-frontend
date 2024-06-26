@@ -1,1 +1,24 @@
-<p>department-list works!</p>
+<div class="container mt-5">
+  <h1>Gerenciamento de Departamentos</h1>
+</div>
+<div class="container mt-5">
+  <button class="btn btn-warning mb-3" (click)="back()">Voltar</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let department of departments">
+        <td>{{ department.departamento }}</td>
+        <td>
+          <button class="btn btn-danger btn-sm ml-2" (click)="exclude(department)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary mb-3" (click)="newDepartment()">Cadastrar Novo Departamento</button>
+
+</div>
