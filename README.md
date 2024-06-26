@@ -2,6 +2,32 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
 
+A aplicação consiste em um desafio proposto por uma vaga de Desenvolvedor Angular + Java. A API criada em Java está disponível em: https://github.com/leomiclos/user-manager
+A aplicação é um CRUD de usuários e departamentos, onde é possível realizar as principais operações, como listar, cadastrar, editar e apagar dados. A API possui armazenagem de dados em memória, portanto é necessário o clone da aplicação JAVA para funcionamento.
+
+
+A estrutura do projeto está organizada em:
+
+LAYOUT:
+   - Componente para organização da aplicação
+   - Possibilidade de adicionar header ou sidebar
+COMPONENTS:
+   - Home 
+   - Usuários
+   - Departamentos
+MODAL:
+   - Cadastrar usuários
+   - Editar usuários
+   - Cadastrar departamentos
+MODEL:
+   - User
+   - Department
+ENVIROMENT:
+   - Environment
+   - 
+     
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
