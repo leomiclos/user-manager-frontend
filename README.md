@@ -2,6 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
 
+<<<<<<< HEAD
 # CRUD de Usuários e Departamentos (Angular + Java)
 
 Este projeto é um aplicativo de gerenciamento de usuários e departamentos, desenvolvido em Angular e integrado com uma API Java. Ele permite listar, cadastrar, editar e excluir dados de usuários e departamentos.
@@ -55,6 +56,7 @@ O componente `Layout` organiza a aplicação e pode incluir elementos como cabe�
 - Personalize os estilos e layouts conforme necessário.
 - Implemente as funcionalidades de CRUD nos componentes relevantes.
 - Adicione mais detalhes específicos à medida que desenvolve a aplicação.
+
 
 ## Development server
 
