@@ -1,6 +1,6 @@
 # GerenciamentoUsuariosFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
+Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 17.2.3.
 
 
 # CRUD de Usuários e Departamentos (Angular + Java)
