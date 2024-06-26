@@ -55,18 +55,29 @@ export class UserComponent {
   }
 
   exclude(user: any) {
-    const id = user.id
-    this.userService.deleteUser(id).subscribe(res => {
-        Swal.fire({
-          icon: 'success',
-          title: 'Usuário excluído com sucesso',
-          showConfirmButton: true
-        }).then(res => {
-          if(res.isConfirmed){
-            window.location.reload()
-          }
-        })
-      })
+    const id = user.id;
+    Swal.fire({
+      title: 'Confirmar exclusão',
+      text: 'Tem certeza que deseja excluir este usuário?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Sim, excluir',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.userService.deleteUser(id).subscribe(res => {
+          Swal.fire({
+            icon: 'success',
+            title: 'Usuário excluído com sucesso',
+            showConfirmButton: true
+          }).then((res) => {
+            if (res.isConfirmed) {
+              window.location.reload();
+            }
+          });
+        });
+      }
+    });
   }
 
 

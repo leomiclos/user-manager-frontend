@@ -33,7 +33,6 @@ export class DepartmentListComponent {
 
   getDepartments() {
     this.departmentService.getDepartments().subscribe((res: any) => {
-      console.log(res);
       this.departments = res
     });
   }
@@ -46,15 +45,31 @@ export class DepartmentListComponent {
   }
   exclude(department: any) {
     const id = department.id
-    this.departmentService.deleteDepartment(id).subscribe(res => {
-      Swal.fire({
-        title: 'Sucesso',
-        text: 'Departamento excluido com sucesso',
-        icon: 'success',
-        showConfirmButton: true
+    Swal.fire({
+      icon: 'warning',
+      title: 'Confirmar Exclusão',
+      text: 'Tem certeza que deseja excluir?',
+      confirmButtonText: 'Sim, excluir',
+      showCancelButton: true,
+      cancelButtonText: 'Não, voltar'
+    }).then(res => {
+      if(res.isConfirmed){
+        this.departmentService.deleteDepartment(id).subscribe(res => {
+          Swal.fire({
+            title: 'Sucesso',
+            text: 'Departamento excluido com sucesso',
+            icon: 'success',
+            showConfirmButton: true
 
-      })
+          }).then(res => {
+            if(res.isConfirmed){
+              window.location.reload()
+            }
+          })
+        })
+      }
     })
+
   }
   newDepartment() {
     this.modalRef = this.modalService.show(DepartmentRegisterComponent)

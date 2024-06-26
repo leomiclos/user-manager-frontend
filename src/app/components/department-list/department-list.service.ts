@@ -17,7 +17,6 @@ export class DepartmentListService {
     return this.http.get(`${this.api}/departamentos`)
   }
 
-
   getDepartmentsById(id: number){
     return this.http.get(`${this.api}/departamentos/${id}`)
   }
